@@ -1,0 +1,28 @@
+{
+  "name": "async-race",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dexmor096/async-race.git"
+  },
+  "keywords": [
+    "async"
+  ],
+  "author": "Gladkiy Konstantine",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dexmor096/async-race/issues"
+  },
+  "homepage": "https://github.com/Dexmor096/async-race#readme",
+  "devDependencies": {
+    "webpack": "^5.88.1",
+    "webpack-cli": "^5.1.4"
+  }
+}
