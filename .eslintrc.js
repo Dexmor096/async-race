@@ -1,15 +1,19 @@
 module.exports = {
-    "env": {
-        "browser": true,
-        "commonjs": true,
-        "es2021": true
-    },
-    "extends": "standard-with-typescript",
-    "overrides": [
-    ],
-    "parserOptions": {
-        "ecmaVersion": "latest"
-    },
-    "rules": {
-    }
+  env: {
+    browser: true,
+    commonjs: true,
+    es2021: true
+  },
+  extends: ['airbnb-base', 'plugin:prettier/recommended'],
+  overrides: [
+  ],
+  parserOptions: {
+    ecmaVersion: 'latest'
+  },
+  plugin: ['prettier'],
+  rules: {
+    'import/extensions': 'off',
+    'prettier/prettier': 'error'
+  }
 }
+  
