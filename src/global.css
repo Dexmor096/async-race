@@ -18,15 +18,16 @@ body{
     rgba(0,0,0,.4)), 0
     url("../assets/image/2pivnoi-pattern.png");
 }
+
 .container	{
 	padding: 0 100px;
 }
-.header, .beer-pub, .customization{
+.header, .bar, .customization{
   padding-top: 20px;
 }
 .race-controls, 
-.beer-pub__pagination, 
-.beer-pub__table {
+.bar__pagination, 
+.bar__table {
   padding-top: 10px;
 }
 .button {
