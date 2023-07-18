@@ -1,26 +1,40 @@
+import { Button } from '../UI/button'
 
 
 export const bar = () => {
 	const content = document.querySelector('.content');
 	const container = document.querySelector('.container');
+	const elementBar = document.createElement('div');
+	elementBar.classList.add('bar');
+
+	const elementBarTable = document.createElement('div');
+	elementBarTable.classList.add('bar__table')
+
+	const elementTableControls = document.createElement('div');
+	elementTableControls.classList.add('table__controls');
+
+	const button = new Button()
+	const selectBtn = button.createButton({text: 'Select', buttonId: `select-${'id'}`}) 
+	const removeBtn = button.createButton({text: 'Remove', buttonId: `remove-${'id'}`}) 
+	const startBtn = button.createButton({text: 'Start', buttonId: `start-${'id'}`}) 
+	const stopBtn = button.createButton({text: 'Stop', buttonId: `stop-${'id'}`}) 
+
+	const elementTableBeerName = document.createElement('span');
+	elementTableBeerName.classList.add('table__name');
+	elementTableBeerName.textContent = `beer name`;
+
+	const elementTableDesktop = document.createElement('div');
+	elementTableDesktop.classList.add('table__desktop');
+
 	if(content) {
 		content.innerHTML = `
-		<div class="bar">
-				<div class="bar__table">
-					<div class="table__controls">
-						<button class="button table__button">Select</button>
-						<button class="button table__button">Remove</button>
-						<button class="button table__button">Start</button>
-						<button class="button table__button">Stop</button>
-						<span class="table__name">beer name</span>
-					</div>
-					<div class="bar-table"></div>
-					<img src="../assets/image/beer_icon_235191.svg" class="table__drink">
-					<div class="table__desktop"></div>
-				</div>
-				</div>
+						<img src="../assets/image/beer_icon_235191.svg" class="table__drink">
 		`
 		container?.append(content)
+		content.append(elementBar);
+		elementBar.append(elementBarTable);
+		elementBarTable.append(elementTableControls, elementTableDesktop);
+		elementTableControls.append(selectBtn, removeBtn, startBtn, stopBtn, elementTableBeerName);
 		barTable()
 	}
 }

@@ -40,7 +40,10 @@ body{
 .table__drink {
   width: 75px;
   height: 75px;
-  filter: invert(53%) sepia(83%) saturate(1352%) hue-rotate(328deg) brightness(109%) contrast(109%);
+  /* filter: invert(53%) sepia(83%) saturate(1352%) hue-rotate(328deg) brightness(109%) contrast(109%); */
+}
+.icon svg path {
+  fill: pink;
 }
 .table__desktop {
   position: relative;
