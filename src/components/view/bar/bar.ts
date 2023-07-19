@@ -1,4 +1,5 @@
 import { Button } from '../UI/button'
+import { Beer } from '../beer/beer';
 
 
 export const bar = () => {
@@ -13,27 +14,30 @@ export const bar = () => {
 	const elementTableControls = document.createElement('div');
 	elementTableControls.classList.add('table__controls');
 
-	const button = new Button()
-	const selectBtn = button.createButton({text: 'Select', buttonId: `select-${'id'}`}) 
-	const removeBtn = button.createButton({text: 'Remove', buttonId: `remove-${'id'}`}) 
-	const startBtn = button.createButton({text: 'Start', buttonId: `start-${'id'}`}) 
-	const stopBtn = button.createButton({text: 'Stop', buttonId: `stop-${'id'}`}) 
+	const button = new Button();
+	const selectBtn = button.createButton({text: 'Select', buttonId: `select-${'id'}`});
+	const removeBtn = button.createButton({text: 'Remove', buttonId: `remove-${'id'}`}); 
+	const startBtn = button.createButton({text: 'Start', buttonId: `start-${'id'}`}); 
+	const stopBtn = button.createButton({text: 'Stop', buttonId: `stop-${'id'}`}); 
 
 	const elementTableBeerName = document.createElement('span');
 	elementTableBeerName.classList.add('table__name');
 	elementTableBeerName.textContent = `beer name`;
+
+	const beerImage = new Beer();
+	const beer = beerImage.createBeer()
 
 	const elementTableDesktop = document.createElement('div');
 	elementTableDesktop.classList.add('table__desktop');
 
 	if(content) {
 		content.innerHTML = `
-						<img src="../assets/image/beer_icon_235191.svg" class="table__drink">
+						<img src="../assets/image/beer_icon_235191.svg" class="beer">
 		`
 		container?.append(content)
 		content.append(elementBar);
 		elementBar.append(elementBarTable);
-		elementBarTable.append(elementTableControls, elementTableDesktop);
+		elementBarTable.append(elementTableControls, beer, elementTableDesktop);
 		elementTableControls.append(selectBtn, removeBtn, startBtn, stopBtn, elementTableBeerName);
 		barTable()
 	}
