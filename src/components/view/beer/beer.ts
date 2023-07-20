@@ -1,12 +1,4 @@
-// const path = require('path')
-// export class Beer {
-// 	public createBeer() {
-// 		const beer = document.createElement('img');
-// 		beer.classList.add('beer');
-// 		beer.setAttribute('src', '../assets/image/beer_icon_235191.svg')
-// 		return beer;
-// 	}
-// }
+
 export class Beer {
 	public createBeer() {
 		const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');

@@ -1,6 +1,5 @@
 import { header } from './header/header';
 import { bar } from './bar/bar';
-import { winnersView } from './winners/winners';
 import { form } from './form/form';
 
 export const render = async () => {

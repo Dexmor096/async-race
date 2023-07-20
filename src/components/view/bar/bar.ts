@@ -31,9 +31,6 @@ export const bar = () => {
 	elementTableDesktop.classList.add('table__desktop');
 
 	if(content) {
-		content.innerHTML = `
-						<img src="../assets/image/beer_icon_235191.svg" class="beer">
-		`
 		container?.append(content)
 		content.append(elementBar);
 		elementBar.append(elementBarTable);
