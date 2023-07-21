@@ -1,5 +1,6 @@
 import { header } from './header/header';
 import { bar } from './bar/bar';
+// import { form } from './form/form';
 import { form } from './form/form';
 
 export const render = async () => {
@@ -12,7 +13,8 @@ export const render = async () => {
 			</div>
 		</div>`
 			document.body.append(pageWrapper)
-			form()
-			bar()
+			form.printForm();
+			
+			bar();
 }
 
