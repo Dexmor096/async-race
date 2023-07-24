@@ -9,16 +9,19 @@ export const bar = async () => {
 	elementBar.classList.add('bar');
 	const beers = await getBeers();
 	console.log(beers);
-	
-	beers.forEach((el: Beer) => {
-		const beerTable = new BarTable({
-			name: el.name, 
-			color: el.color, 
-			id: el.id
-		})
+	try {
+		beers.forEach((el: Beer) => {
+			const beerTable = new BarTable({
+				name: el.name, 
+				color: el.color, 
+				id: el.id
+			})
 			elementBar.append(beerTable.printBarTable());
-	});
-
+		});
+	} catch(err) {
+		throw new Error(`Error to load bar page`)
+	}
+		
 	if(content) {
 		container?.append(content)
 		content.append(elementBar);
