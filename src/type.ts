@@ -2,6 +2,11 @@ export interface PropsButton {
 	text: string,
 	buttonId: string
 }
+export type Beer = { 
+	name: string,
+	color: string,
+	id: number
+}
 export interface PropsInput {
 	type: string,
 	value: string,
